@@ -49,7 +49,7 @@ class NoteFormWidget extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         border: Border.all(
-            color: Colors.teal,// set border color
+            color: Colors.pink.shade700,// set border color
             width: 3.0),   // set border width
         borderRadius: BorderRadius.all(
             Radius.circular(10.0)), // set rounded corner radius
@@ -58,7 +58,7 @@ class NoteFormWidget extends StatelessWidget {
           maxLines: 1,
           initialValue: title,
           style: TextStyle(
-            color: Colors.red,
+            color: Colors.pink,
             fontWeight: FontWeight.normal,
             fontSize: 20,
           ),
@@ -78,7 +78,7 @@ class NoteFormWidget extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         border: Border.all(
-            color: Colors.teal,// set border color
+            color: Colors.pink.shade700,// set border color
             width: 3.0),   // set border width
         borderRadius: BorderRadius.all(
             Radius.circular(10.0)), // set rounded corner radius
@@ -86,7 +86,7 @@ class NoteFormWidget extends StatelessWidget {
     child: TextFormField(
           maxLines: 5,
           initialValue: description,
-          style: TextStyle(color: Colors.black, fontSize: 18),
+          style: TextStyle(color: Colors.pink, fontSize: 18),
           decoration: InputDecoration(
             border: InputBorder.none,
             hintText: '   schreib etwas.....',

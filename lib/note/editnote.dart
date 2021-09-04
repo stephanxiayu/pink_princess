@@ -65,13 +65,21 @@ class _AddEditNotePageState extends State<AddEditNotePage> {
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           onPrimary: Colors.white,
-          primary: isFormValid ? null : Colors.grey.shade700,
+          primary: isFormValid  
+          ? Colors.pink.shade700 
+         : Colors.grey.shade700,
+          
         ),
         onPressed: addOrUpdateNote,
         child: Text('Speichern'),
       ),
     );
   }
+
+
+
+
+
 
   void addOrUpdateNote() async {
     final isValid = _formKey.currentState!.validate();
