@@ -73,7 +73,7 @@ class _NotesPageState extends State<NotesPage> {
                        child: isLoading
                 ? Lottie.network("https://assets3.lottiefiles.com/packages/lf20_fduqekix.json")
                 : notes.isEmpty
-                    ? Lottie.network("https://assets3.lottiefiles.com/packages/lf20_ycbVE1.json")
+                    ? Lottie.network("https://assets9.lottiefiles.com/packages/lf20_wdnoqlgy.json")
                     : buildNotes()
                      ),
                

@@ -39,7 +39,7 @@ class NoteFormWidget extends StatelessWidget {
               buildTitle(),
               SizedBox(height: 10),
               buildDescription(),
-             Container(child: Lottie.network("https://assets9.lottiefiles.com/packages/lf20_wdnoqlgy.json"),)
+             Container(child: Lottie.network("https://assets3.lottiefiles.com/packages/lf20_ycbVE1.json"),)
             ],
           ),
         ),

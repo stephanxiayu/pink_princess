@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pink_princess/note/db.dart';
 import 'package:pink_princess/note/note.dart';
 import 'package:pink_princess/note/notewidget.dart';
-import 'package:lottie/lottie.dart';
+
 
 
 
