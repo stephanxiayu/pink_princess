@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:lottie/lottie.dart';
 import 'package:pink_princess/ads/ads_data.dart';
 import 'package:pink_princess/note/db.dart';
 import 'package:pink_princess/note/editnote.dart';
@@ -69,21 +70,12 @@ class _NotesPageState extends State<NotesPage> {
         ),
         body: 
              Center(
-            child: isLoading
-                ? CircularProgressIndicator()
+                       child: isLoading
+                ? Lottie.network("https://assets3.lottiefiles.com/packages/lf20_fduqekix.json")
                 : notes.isEmpty
-                    ? Text(
-                        'Was wollen wir erledigen?',
-                         style: TextStyle(
-      color: Colors.white,
-      fontSize: 24,fontWeight: FontWeight.normal,
-      shadows: <Shadow>[Shadow(offset: Offset(1.0, 1.0),blurRadius: 2.0,color: Colors.black,
-        ),
-      ],
-    ),
-                      )
-                    : buildNotes(),
-          ),
+                    ? Lottie.network("https://assets3.lottiefiles.com/packages/lf20_ycbVE1.json")
+                    : buildNotes()
+                     ),
                
         floatingActionButton: FloatingActionButton(
           backgroundColor: Colors.black87,

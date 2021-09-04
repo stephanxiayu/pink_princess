@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:intl/intl.dart';
+import 'package:lottie/lottie.dart';
+import 'package:pink_princess/ads/ads_data.dart';
 import 'package:pink_princess/note/db.dart';
 import 'package:pink_princess/note/editnote.dart';
 import 'package:pink_princess/note/note.dart';
@@ -66,11 +69,22 @@ class _NoteDetailPageState extends State<NoteDetailPage> {
                   Text(
                     note.description,
                     style: TextStyle(color: Colors.white70, fontSize: 18),
-                  )
+                  ), 
+                  SizedBox(height: 100,),
+
+                       Center(child: Lottie.network("https://assets8.lottiefiles.com/packages/lf20_7cbs9j80.json"),)
                 ],
               ),
             ),
-    );
+             bottomNavigationBar: Container(
+        height: 60,
+        color: Colors.black,
+        child: AdWidget(
+          ad: AdmobHelper.getBannerAd()..load(),
+          key: UniqueKey(),
+          ) ));
+      
+    
   }
 
   Widget editButton()  => IconButton(

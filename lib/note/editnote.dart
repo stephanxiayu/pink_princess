@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pink_princess/note/db.dart';
 import 'package:pink_princess/note/note.dart';
 import 'package:pink_princess/note/notewidget.dart';
-
+import 'package:lottie/lottie.dart';
 
 
 
@@ -40,20 +40,25 @@ class _AddEditNotePageState extends State<AddEditNotePage> {
         appBar: AppBar(
           actions: [buildButton()],
         ),
-        body: Form(
-          key: _formKey,
-          child: NoteFormWidget(
-            isImportant: isImportant,
-            number: number,
-            title: title,
-            description: description,
-            onChangedImportant: (isImportant) =>
-                setState(() => this.isImportant = isImportant),
-            onChangedNumber: (number) => setState(() => this.number = number),
-            onChangedTitle: (title) => setState(() => this.title = title),
-            onChangedDescription: (description) =>
-                setState(() => this.description = description)
-          ),
+        body: SingleChildScrollView(
+          child: Column(
+            children:[ Form(
+              key: _formKey,
+              child: NoteFormWidget(
+                isImportant: isImportant,
+                number: number,
+                title: title,
+                description: description,
+                onChangedImportant: (isImportant) =>
+                    setState(() => this.isImportant = isImportant),
+                onChangedNumber: (number) => setState(() => this.number = number),
+                onChangedTitle: (title) => setState(() => this.title = title),
+                onChangedDescription: (description) =>
+                    setState(() => this.description = description)
+              ),
+            ),
+          
+               ]   ),
         ),
       );}
 

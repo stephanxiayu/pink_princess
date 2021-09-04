@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class NoteFormWidget extends StatelessWidget {
   final bool? isImportant;
@@ -34,11 +35,11 @@ class NoteFormWidget extends StatelessWidget {
             fontWeight: FontWeight.normal,
             fontSize: 20,
           ),),
-              SizedBox(height: 40,),
+              SizedBox(height: 10,),
               buildTitle(),
-              SizedBox(height: 20),
+              SizedBox(height: 10),
               buildDescription(),
-              SizedBox(height: 16),
+             Container(child: Lottie.network("https://assets9.lottiefiles.com/packages/lf20_wdnoqlgy.json"),)
             ],
           ),
         ),
