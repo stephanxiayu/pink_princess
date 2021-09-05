@@ -54,6 +54,16 @@ class NoteCardWidget extends StatelessWidget {
       ],
     ),
             ),
+            Text(
+              note.description,
+               style: TextStyle(
+      color: Colors.pink.shade300,
+      fontSize: 15,fontWeight: FontWeight.normal,
+      shadows: <Shadow>[Shadow(offset: Offset(1.0, 1.0),blurRadius: 2.0,color: Colors.grey,
+        ),
+      ],
+    ),
+            ),
           ],
         ),
       ),
@@ -64,15 +74,15 @@ class NoteCardWidget extends StatelessWidget {
   double getMinHeight(int index) {
     switch (index % 4) {
       case 0:
-        return 100;
+        return 150;
       case 1:
-        return 100;
+        return 150;
       case 2:
-        return 100;
+        return 150;
       case 3:
-        return 100;
+        return 150;
       default:
-        return 100;
+        return 150;
     }
   }
 }

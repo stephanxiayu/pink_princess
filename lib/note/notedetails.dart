@@ -52,6 +52,11 @@ class _NoteDetailPageState extends State<NoteDetailPage> {
               child: ListView(
                 padding: EdgeInsets.symmetric(vertical: 8),
                 children: [
+                   Text(
+                    DateFormat.yMMMd().format(note.createdTime),
+                    style: TextStyle(color: Colors.white38),
+                  ),
+                  SizedBox(height: 8),
                   Text(
                     note.title,
                     style: TextStyle(
@@ -61,11 +66,7 @@ class _NoteDetailPageState extends State<NoteDetailPage> {
                     ),
                   ),
                   SizedBox(height: 8),
-                  Text(
-                    DateFormat.yMMMd().format(note.createdTime),
-                    style: TextStyle(color: Colors.white38),
-                  ),
-                  SizedBox(height: 8),
+                 
                   Text(
                     note.description,
                     style: TextStyle(color: Colors.white70, fontSize: 18),
